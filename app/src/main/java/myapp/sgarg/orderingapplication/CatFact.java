@@ -53,36 +53,35 @@ public class CatFact extends AppCompatActivity {
 
         Call<MultiFactsModel> call2 = RetrofitBuilder.getInstance().getMyApi().listData();
 
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                catFact.setText("");
+        btn2.setOnClickListener(v -> {
+            catFact.setText("");
 
-                call2.clone().enqueue(new Callback<MultiFactsModel>() {
-                    @Override
-                    public void onResponse(Call<MultiFactsModel> call, Response<MultiFactsModel> response) {
-                        MultiFactsModel multiFacts = response.body();
-                        List<ModelData> mdata = new ArrayList<>();
+            call2.clone().enqueue(new Callback<MultiFactsModel>() {
+                @Override
+                public void onResponse(Call<MultiFactsModel> call1, Response<MultiFactsModel> response) {
 
-                        final boolean b = mdata.addAll(multiFacts.getData());
+                    MultiFactsModel multiFacts = response.body();
 
-                        if (b) {
-                            Toast.makeText(CatFact.this, "Addition of All the data was successful!!!", Toast.LENGTH_SHORT).show();
-                            for (int i = 0; i < 5; i++) {
-                                catFact.append(i + ")\t" + mdata.get(i).getFact() + "\n\n");
-                            }
-                        }
-                        else {
-                            Toast.makeText(CatFact.this, "Could Not add All the data", Toast.LENGTH_SHORT).show();
+                    List<ModelData> mdata = new ArrayList<>();
+
+                    final boolean b = mdata.addAll(multiFacts.getData());
+
+                    if (b) {
+                        Toast.makeText(CatFact.this, "Addition of All the data was successful!!!", Toast.LENGTH_SHORT).show();
+                        for (int i = 0; i < 5; i++) {
+                            catFact.append((i + 1) + ")\t" + mdata.get(i).getFact() + "\n\n");
                         }
                     }
-
-                    @Override
-                    public void onFailure(Call<MultiFactsModel> call, Throwable t) {
-                        Toast.makeText(CatFact.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                    else {
+                        Toast.makeText(CatFact.this, "Could Not add All the data", Toast.LENGTH_SHORT).show();
                     }
-                });
-            }
+                }
+
+                @Override
+                public void onFailure(Call<MultiFactsModel> call1, Throwable t) {
+                    Toast.makeText(CatFact.this, "Something Went Wrong", Toast.LENGTH_SHORT).show();
+                }
+            });
         });
     }
 }

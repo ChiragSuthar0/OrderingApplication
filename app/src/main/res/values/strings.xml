@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Ordering Application</string>
-    <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -9,4 +8,13 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string name="fact_btn_1">Only 1 Fact</string>
+    <string name="fact_btn_2">Get 5 Facts</string>
+    <string name="ordering_application">Ordering Application</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+
+    <string name="userName">Please Enter your UserName</string>
+    <string name="Password">Please Enter your Password</string>
 </resources>
