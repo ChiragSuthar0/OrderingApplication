@@ -45,7 +45,7 @@ public class CatFact extends AppCompatActivity {
                 }
 
                 @Override
-                public void onFailure(Call<ModelData> call, Throwable t) {
+                 public void onFailure(Call<ModelData> call, Throwable t) {
                     Toast.makeText(CatFact.this, "Some Error has Occured", Toast.LENGTH_LONG).show();
                 }
             });
