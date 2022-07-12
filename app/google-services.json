@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "147799141794",
+    "project_id": "sgargd89-ec4f5",
+    "storage_bucket": "sgargd89-ec4f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147799141794:android:8c52327095fd18434a16fb",
+        "android_client_info": {
+          "package_name": "myapp.sgarg.orderingapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147799141794-qsm9jhf66da43hneqtif839hutb9bac9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4c7wu9FUGpk73hdPwGu1yn1Tck8rUkBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147799141794-qsm9jhf66da43hneqtif839hutb9bac9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
